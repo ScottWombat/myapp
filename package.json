@@ -1,0 +1,50 @@
+{
+  "name": "my-app",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "nodemon --exec vite-node server --watch server --ext ts",
+    "start": "NODE_ENV=production node dist/server/index.cjs",
+    "lint": "eslint .",
+    "preview": "vite preview",
+    "build": "tsc && npm run build:client && npm run build:ssr && npm run build:server",
+    "build:client": "vite build --outDir dist/client",
+    "build:ssr": "vite build --outDir dist/ssr --ssr src/entry-server.tsx",
+    "build:server": "tsup",
+    "clean": "rm -rf ./dist"
+  },
+  "dependencies": {
+    "@reduxjs/toolkit": "^2.11.2",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "react-redux": "^9.2.0",
+    "react-router": "^7.10.1",
+    "react-router-dom": "^7.10.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.1",
+    "@types/compression": "^1.8.1",
+    "@types/express": "^5.0.6",
+    "@types/node": "^24.10.1",
+    "@types/react": "^19.2.5",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.1.1",
+    "compression": "^1.8.1",
+    "eslint": "^9.39.1",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.4.24",
+    "express": "^5.2.1",
+    "globals": "^16.5.0",
+    "helmet": "^8.1.0",
+    "nodemon": "^3.1.11",
+    "sirv": "^3.0.2",
+    "tsup": "^8.5.1",
+    "typescript": "~5.9.3",
+    "typescript-eslint": "^8.46.4",
+    "vite": "^7.2.4",
+    "vite-node": "^5.2.0",
+    "vite-plugin-devtools": "^0.4.0"
+  },
+  "packageManager": "pnpm@10.26.0"
+}
