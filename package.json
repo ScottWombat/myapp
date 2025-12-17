@@ -6,13 +6,14 @@
   "scripts": {
     "dev": "nodemon --exec vite-node server --watch server --ext ts",
     "start": "NODE_ENV=production node dist/server/index.cjs",
-    "lint": "eslint .",
     "preview": "vite preview",
     "build": "tsc && npm run build:client && npm run build:ssr && npm run build:server",
     "build:client": "vite build --outDir dist/client",
     "build:ssr": "vite build --outDir dist/ssr --ssr src/entry-server.tsx",
     "build:server": "tsup",
-    "clean": "rm -rf ./dist"
+    "clean": "rm -rf ./dist",
+    "lint": "eslint . --max-warnings=0",
+    "lint:fix": "pnpm lint --fix",
   },
   "dependencies": {
     "@reduxjs/toolkit": "^2.11.2",
