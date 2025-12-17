@@ -13,6 +13,11 @@ This repository complements the article: [Advanced React SSR Techniques with Str
 - Server-to-Client Data
 - Production-Ready Setup
 
+
+# Tools
+PNPM
+VITE
+
 ## Run Project
 
 Install Dependencies:
